@@ -139,9 +139,9 @@ static	int	get_len(int n, int precision, int base)
 	int	len;
 
 	len = 1;
-	while (n / 10 != 0)
+	while (n / base != 0)
 	{
-		n /= 10;
+		n /= base;
 		len++;
 	}
 	return (precision > len ? precision : len);
